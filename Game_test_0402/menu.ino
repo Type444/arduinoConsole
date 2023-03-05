@@ -1,15 +1,7 @@
 // Display the main menu
 void menu() {
   // Display the menu options on the LCD screen
-  lcd.clear();
-  lcd.setCursor(4, 0);
-  lcd.print("PLAYSTATION");
-  lcd.setCursor(1, 1);
-  lcd.print("Saratov");
-  lcd.setCursor(1, 2);
-  lcd.print("Space Race");
-  lcd.setCursor(1, 3);
-  lcd.print("Google Dino");
+  menu_text();
 
   delay(500);
 
@@ -48,15 +40,7 @@ void menu() {
         while (menu_on == false) {
           labyrinth_game();
         }
-        lcd.clear();
-        lcd.setCursor(4, 0);
-        lcd.print("PLAYSTATION");
-        lcd.setCursor(1, 1);
-        lcd.print("Saratov");
-        lcd.setCursor(1, 2);
-        lcd.print("Space Race");
-        lcd.setCursor(1, 3);
-        lcd.print("Google Dino");
+        menu_text();
       }
       // If the second menu option is selected, start the spaceship game
       else if (curs == 2) {
@@ -66,6 +50,7 @@ void menu() {
         while (menu_on == false) {
           spaseship_game();
         }
+        menu_text();
       }
       // If the third menu option is selected, start the Google Dino game
       else if (curs == 3) {
@@ -77,6 +62,7 @@ void menu() {
         while (menu_on == false) {
           Google_Dino();
         }
+        menu_text();
       }
     }
   }

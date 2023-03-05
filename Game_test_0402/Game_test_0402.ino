@@ -109,8 +109,6 @@ bool map3 [4][20] =
 
 void setup()
 {
-
-
   Serial.begin(9600);
   pinMode(button_pin, INPUT_PULLUP);
   lcd.init();
